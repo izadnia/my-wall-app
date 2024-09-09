@@ -64,11 +64,12 @@ function Note({ note, editNote, deleteNote }: NoteProps) {
         style={{ backgroundColor: noteColor }}
       >
         {isEditing ? (
-          <div className="except">
+          <div className="">
             <textarea
               value={newText}
               onChange={(e) => setNewText(e.target.value)}
               style={{
+                border:'0',
                 width: "90%",
                 margin: "5px",
                 padding: "5px",
@@ -80,6 +81,8 @@ function Note({ note, editNote, deleteNote }: NoteProps) {
               value={newDeadline.split("T")[0]}
               onChange={(e) => setNewDeadline(e.target.value)}
               style={{
+
+                border:'0',
                 width: "90%",
                 margin: "5px",
                 padding: "5px",
